@@ -11,33 +11,43 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: "poppins" , sans-serif;
 }
 body{
     min-height: 100vh;
-    background-color: var(--bg-color1) ;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn64p2f9Qt3zYnjDHbfLp65Bktwo_s7XDdkw&s') ;
     color: #ffff;
     font-family: sans-serif;
-    padding: 0 15px;
+    background-size: cover;
+    background-position: center;
 }
+body::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+   
+}
+
 hr{
     margin-bottom: 10px;
 }
 .header{
     position: sticky;
     top:0;
-    background-color: var(--bg-color1);
+    background-color: rgba(33, 37, 41, 0.7) ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
     padding: 15px 0 ;
     & #city_input{
-        background-color: var(--bg-color2);
+        background-color: 42,43,45,0.7;
         border: none;
         padding: 12px;
         font-size: 16px;
         border-radius: 25px;
-        color:#fff;
+        color:#110f0f;
         &:focus{
             outline: none;
         }
@@ -47,7 +57,7 @@ hr{
     font-size: 16px;
     padding:12px ;
     border-radius: 25px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
 }
 & #locationBtn{
@@ -55,12 +65,12 @@ hr{
     font-size: 16px;
     padding:12px ;
     border-radius: 25px;
-    background-color: #ea6e4b;
+    background-color: rgba(234, 110, 75, 0.8);
     cursor: pointer;
 }
 }
 .card{
-    background-color: var(--bg-color2);
+    background-color: rgba(42, 43 , 45 , 0.8) ;
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -297,12 +307,24 @@ hr{
     }
 }
 footer {
-    background: var(--bg-color1) ;
-    color: #fff;
+    background: rgba(33, 37, 41, 0);  
+    color: #fff;                     
     text-align: center;
     padding: 10px 0;
     width: 100%;
+    position: relative;               
+    z-index: 10;                     
 }
+
+footer a {
+    text-decoration: none;  
+    color: #fff;          
+}
+
+footer a:hover {
+    color: #ea6e4b;         
+}
+
 ul {
     float:center;
     display: flex;
@@ -319,7 +341,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-family: Arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
